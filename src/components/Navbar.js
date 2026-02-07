@@ -3,11 +3,18 @@ import './Navbar.css'
 
 export default function Navbar() {
   return (
-    <div className='navbar'>
-        <nav>
-        <Link to='/' className='brand'><h1>love nature</h1></Link>
-        <Link to='/Sports'>Nature Spotrs</Link>
-        </nav>     
-    </div>
-  )
+<nav className="navbar">
+      <div className="navbar-container">
+
+        <Link to="/" className="brand">
+          <h1>Love Nature</h1>
+        </Link>
+
+        <div className="nav-links">
+          {/* <Link to="/" className="nav-item">Home</Link> */}
+          <Link to="/sports" className="nav-item">Nature Sports</Link>
+        </div>
+      </div>
+    </nav>
+  );
 }

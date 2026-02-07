@@ -1,0 +1,131 @@
+:root {
+  --dark-forest: #1a3c34;     
+  --mid-green: #2e7d5a;         
+  --light-green: #4caf50;       
+  --accent-green: #66bb6a;      
+  --text-light: #e8f5e9;       
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--dark-forest);
+  box-shadow: 0 4px 20px var(--shadow);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(76, 175, 80, 0.15);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--text-light);
+  transition: transform 0.3s ease;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, var(--light-green), var(--accent-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(76, 175, 80, 0.3);
+}
+
+.brand:hover {
+  transform: scale(1.05);
+}
+
+/*  links-re  */
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: var(--light-green);
+  transform: translateY(-2px);
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -6px;
+  left: 50%;
+  background: var(--light-green);
+  transition: width 0.4s ease, left 0.4s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.nav-item:hover::after {
+  width: 70%;
+  left: 50%;
+}
+
+/* res-mobile */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    padding: 1.2rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 1.8rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-item {
+    font-size: 1.05rem;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .brand h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/*  navbar-animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  animation: slideDown 0.7s ease-out forwards;
+}
