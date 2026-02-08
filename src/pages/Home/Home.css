@@ -1,0 +1,83 @@
+.home {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #e8f5e9 0%, #c8e6c9 100%);
+  /* یا اگر خواستی تصویر پس‌زمینه ملایم جنگل */
+  background: url('https://images.pexels.com/photos/117843/pexels-photo-117843.jpeg') center/cover no-repeat fixed;
+  background-color: rgba(232, 245, 233, 0.85);
+  background-blend-mode: overlay;
+  padding: 2rem 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #1b3a2f;
+}
+
+.home h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1.5rem auto;
+  padding: 1.2rem 1.8rem;
+  max-width: 800px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(30, 58, 47, 0.12);
+  border-left: 8px solid #2e7d32; 
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover*/
+.home h2:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(46, 125, 50, 0.22);
+  border-left-color: #4caf50;
+  background: linear-gradient(to right, #f1f8e9, white);
+}
+.home h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(to right, #2e7d32, #81c784);
+  transition: width 0.4s ease;
+}
+
+.home h2:hover::after {
+  width: 100%;
+}
+
+/*   loading.error */
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #2e7d32;
+  padding: 6rem 1rem;
+  font-weight: 500;
+}
+
+.loading::before {
+  content: "در حال بارگذاری ماجراجویی‌های طبیعت...";
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.error {
+  text-align: center;
+  color: #c62828;
+  font-size: 1.4rem;
+  padding: 4rem 1rem;
+  background: #ffebee;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .home h2 {
+    font-size: 1.5rem;
+    padding: 1rem 1.4rem;
+    margin: 1.2rem 0.5rem;
+  }
+}

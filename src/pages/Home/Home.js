@@ -1,5 +1,7 @@
 import { useFetch } from '../../hooks/useFetch'
 import React from 'react'
+import './Home.css';
+
 
 export default function Home() {
   
