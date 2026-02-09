@@ -10,8 +10,8 @@ export default function SportList({Sports}) {
             <div key={Sport.id} className='card'>
                 <h3> {Sport.name}</h3>
                 <p>{Sport.description}</p>
-                <div>{Sport.equipment.substring(0,100)}...</div>
-                <Link to={`/Sports/${Sport.id}`}>what is that ?</Link>
+                <div>{Sport.equipment.substring(0,15)} .....</div>
+                <Link to={`/Sports/${Sport.id}`}>read more </Link>
             </div>
         ))}
     </div>
