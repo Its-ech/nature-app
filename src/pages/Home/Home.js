@@ -1,6 +1,7 @@
 import { useFetch } from '../../hooks/useFetch'
 import React from 'react'
 import './Home.css';
+import SportList from '../../components/SportList';
 
 
 export default function Home() {
@@ -10,9 +11,7 @@ export default function Home() {
     <div className='home'>
      {error && <p className='error'>{error}</p>}
      {isLoading && <p className='Loading'>{isLoading}</p>}
-     {data && data.map( Sport=>(
-      <h2 key={Sport.id}>{Sport.name}</h2>
-     ))}
+     {data && <SportList Sports={data}/>}
     </div>
   )
 }
