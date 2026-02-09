@@ -1,5 +1,6 @@
 import {useParams} from 'react-router-dom'
 import {useFetch} from './../../hooks/useFetch'
+import './Sports.css';
 
 import React from 'react'
 
