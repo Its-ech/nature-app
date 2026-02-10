@@ -7,8 +7,10 @@ export default function Create() {
     const[description, setDescription] = useState('')
     const[benefits, setBenefits] = useState('')
     const[equipment, setEquipment] = useState('')
+
     const handleSubmit = (e)=>{
         e.preventDefault()
+        console.log(name,description,benefits,equipment);
     }
   return (
     <div className='create'>
@@ -47,7 +49,7 @@ export default function Create() {
                 />
             </lable>
             
-            <botton className="btn"> submit</botton>
+            <button className="btn"> submit</button>
         </form>
     </div>
   )
