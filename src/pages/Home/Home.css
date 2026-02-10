@@ -3,7 +3,7 @@
   background: url('https://images.pexels.com/photos/117843/pexels-photo-117843.jpeg') center/cover no-repeat fixed;
   background-color: rgba(232, 245, 233, 0.85);
   background-blend-mode: overlay;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   font-family: system-ui, -apple-system, sans-serif;
   color: #1b3a2f;
 }

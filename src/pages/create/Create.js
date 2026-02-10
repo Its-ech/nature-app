@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
+import './Create.css'
+
 
 export default function Create() {
     const[name,setName] = useState('')
     const[description, setDescription] = useState('')
     const[benefits, setBenefits] = useState('')
     const[equipment, setEquipment] = useState('')
+    const handleSubmit = (e)=>{
+        e.preventDefault()
+    }
   return (
     <div className='create'>
         <h2 className='add-sport'>ADD New Sport</h2>
 
-        <form>
+        <form onSubmit={handleSubmit}>
             <lable>
                 <span>sport Name:</span>
                 <input type="text" onChange={(e)=> setName(e.target.value)}
@@ -42,7 +47,7 @@ export default function Create() {
                 />
             </lable>
             
-            <botton className="btn">submit</botton>
+            <botton className="btn"> submit</botton>
         </form>
     </div>
   )

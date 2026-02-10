@@ -1,0 +1,108 @@
+.create {
+  min-height: 100vh;
+  padding: 4rem 1.5rem 6rem;
+  background: linear-gradient(to bottom, rgba(30, 58, 47, 0.7), rgba(46, 125, 50, 0.45));
+  color: #f0f7f0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.add-sport {
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 3.5rem;
+  color: #e8f5e9;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.55);
+  background: linear-gradient(90deg, #81c784, #4caf50, #2e7d32);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.8px;
+}
+
+/* form  */
+form {
+  max-width: 750px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(129, 199, 132, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+/*  label + span + input/textarea */
+label {
+  display: block;
+  margin-bottom: 1.8rem;
+}
+
+label span {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  color: #d0e8d0;
+}
+
+/* input  textarea */
+input,
+textarea {
+  width: 95%;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.05rem;
+  border: 1px solid rgba(129, 199, 132, 0.4);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #f0f7f0;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.25);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/*  submit */
+.btn {
+  display: block;
+  width: 97%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #2e7d32, #4caf50);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+  margin-top: 1.5rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, #4caf50, #66bb6a);
+  box-shadow: 0 12px 30px rgba(76, 175, 80, 0.5);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.35);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .add-sport { font-size: 2.2rem; margin-bottom: 2.5rem; }
+  form { padding: 2rem 1.5rem; }
+  .btn { font-size: 1.15rem; padding: 0.9rem; }
+}
