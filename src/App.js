@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route,} from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/Home/Home'
+import Create from './pages/create/Create'
 import Serch from './pages/Serch/Serch'
 import Sports from './pages/Sports/Sports'
 
@@ -19,6 +20,7 @@ function App() {
         <Route path = '/' element ={<Home/>} />
         <Route path = '/Serch' element ={<Serch/>} />
         <Route path = '/Sports/:id' element ={<Sports/>} />
+        <Route path = '/newSport' element ={<Create/>} />
       </Routes> 
       </BrowserRouter>
     </div>
