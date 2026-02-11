@@ -10,7 +10,7 @@ export default function Create() {
 
     const handleSubmit = (e)=>{
         e.preventDefault()
-        console.log(name,description,benefits,equipment);
+        
     }
   return (
     <div className='create'>
