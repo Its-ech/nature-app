@@ -1,7 +1,7 @@
 {
   "Sports": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Hiking",
       "description": "Long walks on natural trails such as mountains, forests, or hills to enjoy scenic views and fresh air.",
       "benefits": "Improves overall fitness, reduces stress, strengthens leg and heart muscles, and fosters a deeper connection with nature.",
@@ -9,7 +9,7 @@
       "image": "https://4kwallpapers.com/images/walls/thumbs_3t/3820.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Trail Running",
       "description": "Running on uneven natural paths like forests or mountains for greater challenge compared to urban running.",
       "benefits": "Increases endurance, burns high calories, improves balance and body coordination, and provides a peaceful nature experience.",
@@ -17,7 +17,7 @@
       "image": "https://4kwallpapers.com/images/walls/thumbs_3t/6591.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Rock Climbing",
       "description": "Ascending natural rock faces using hands and feet for both physical and mental challenges.",
       "benefits": "Strengthens full-body muscles, boosts focus and self-confidence, and delivers excitement in a natural environment.",
@@ -25,7 +25,7 @@
       "image": "https://4kwallpapers.com/images/walls/thumbs_3t/11200.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Kayaking",
       "description": "Paddling a small boat on rivers or natural lakes to explore blue-water nature.",
       "benefits": "Works upper-body muscles, aids weight loss, promotes mental relaxation, and allows close observation of wildlife.",
@@ -33,7 +33,7 @@
       "image": "https://4kwallpapers.com/images/walls/thumbs_3t/3177.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Mountain Biking",
       "description": "Cycling on rugged mountain trails for speed and adventure in the wilderness.",
       "benefits": "Enhances cardiovascular system, strengthens legs, reduces depression, and offers enjoyment of stunning natural landscapes.",

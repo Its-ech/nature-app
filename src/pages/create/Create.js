@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Create.css'
+import { useFetch } from '../../hooks/useFetch'
 
 
 export default function Create() {
@@ -8,9 +9,10 @@ export default function Create() {
     const[benefits, setBenefits] = useState('')
     const[equipment, setEquipment] = useState('')
 
+    const {postData , data , error} = useFetch('http://localhost:3000/Sports' , 'POST')
     const handleSubmit = (e)=>{
         e.preventDefault()
-        
+        postData({name,description,benefits,equipment})
     }
   return (
     <div className='create'>

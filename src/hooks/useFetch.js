@@ -17,11 +17,11 @@ export const useFetch = (url, method = 'GET') => {
     }
 
 useEffect(()=>{
-    const fetchData = async ()=> {
+    const fetchData = async (fetchOptions)=> {
         setIsLoading(true)
 
     try {
-        const response = await fetch(url)
+        const response = await fetch(url,{...fetchOptions})
         if(!response.ok){
             throw new Error(response.statusText)
         }
@@ -37,8 +37,13 @@ useEffect(()=>{
         setError(error.massage)
       }
     }
-    fetchData()  
-}, [url])
+    if(method === 'GET'){
+        fetchData()
+    }  
+    if(method === 'POST' && options){
+        fetchData(options)
+    }  
+}, [url, method ,options])
 
  return{data, isLoading, error, postData}
 
