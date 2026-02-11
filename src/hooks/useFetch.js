@@ -1,9 +1,20 @@
 import { useState,useEffect } from "react";
 
-export const useFetch = (url) => {
+export const useFetch = (url, method = 'GET') => {
     const [data ,setData]= useState(null)
     const [isLoading, setIsLoading]=useState(false)
     const [error,setError]=useState(null)
+    const [options,setOptions]=useState(null)
+
+    const postData = (postData) => {
+        setOptions({
+            method: "POST",
+            headeers: {
+                "Content-type":"application/jeson"
+            },
+            body: JSON.stringify(postData)
+        })
+    }
 
 useEffect(()=>{
     const fetchData = async ()=> {
@@ -29,6 +40,6 @@ useEffect(()=>{
     fetchData()  
 }, [url])
 
- return{data, isLoading, error}
+ return{data, isLoading, error, postData}
 
 }
